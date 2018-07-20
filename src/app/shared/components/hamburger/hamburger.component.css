@@ -1,0 +1,12 @@
+.dropicon{
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width:90%;
+    position: relative; /* <-- Added */
+    z-index: 9999; /* <-- Added */
+}

@@ -1,0 +1,4 @@
+{
+    "window.title": "${rootName}${separator}${activeEditorShort}",
+    "git.ignoreLimitWarning": true
+}
