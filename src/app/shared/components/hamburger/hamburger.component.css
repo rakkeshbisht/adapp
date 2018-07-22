@@ -1,12 +1,15 @@
-.dropicon{
-    -webkit-padding-start: 0px;
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
-    width:90%;
-    position: relative; /* <-- Added */
-    z-index: 9999; /* <-- Added */
+#hamburger .dropdown-toggle {
+    border:0px solid transparent;
+    background-color: #007BFF    
+}
+
+#hamburger .dropdown-toggle::after {
+    display:none;        
+}
+
+#hamburger .dropdown-menu a:hover
+{
+  color: #fff;
+  background-color : darkgray;
+  border-color: #fff;
 }

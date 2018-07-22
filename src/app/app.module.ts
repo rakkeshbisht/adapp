@@ -10,8 +10,7 @@ import { MainComponent } from './main/main.component';
 @NgModule({
   declarations: [
     c.AppComponent,
-    c.MainComponent,
-    c.HomeComponent    
+    c.MainComponent       
   ],
   imports: [
     BrowserModule,

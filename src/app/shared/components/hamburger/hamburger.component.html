@@ -1,10 +1,15 @@
-<div class="dropdown">
-    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-        <span class="glyphicon glyphicon-menu-hamburger"></span>
+<div id="hamburger" class="btn-group">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="fa fa-bars" style="font-size:24px"></span>
     </button>
-    <div class="dropdown-menu">
-      <a class="dropdown-item glyphicon glyphicon-user" href="#">Link 1</a>
-      <a class="dropdown-item glyphicon glyphicon-log-out" href="#">Link 2</a>      
+  
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item" href="#">
+          <span class="fa fa-home"></span> Home
+      </a>
+      <a class="dropdown-item" href="#">
+        <span class="fa fa-sign-out"></span> Log Off
+      </a>      
     </div>
-</div>
-
+ </div>

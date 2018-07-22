@@ -1,0 +1,5 @@
+.transparentbtn{
+    border:0px solid transparent;
+    background-color: #007BFF;
+    color: white;  
+}
