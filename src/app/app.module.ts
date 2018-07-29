@@ -1,25 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Route, RouterModule } from '@angular/router';
 import { AccordionModule } from 'ngx-bootstrap';
 import { SharedModule } from './shared/shared.module'
-
-import * as c from './';
-import { MainComponent } from './main/main.component';
+import { TradeModule } from "./trade/trade.module";
+import * as c from '.';
+import { AppRoutes } from './app.routing';
 
 @NgModule({
   declarations: [
     c.AppComponent,
-    c.MainComponent       
+    c.MainComponent,
+    c.AccountListComponent       
   ],
   imports: [
     BrowserModule,
     AccordionModule,
     SharedModule,
-    RouterModule.forRoot([
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'home', component: MainComponent }     
-    ])
+    TradeModule,
+    AppRoutes 
   ],
   providers: [],
   bootstrap: [c.AppComponent]

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import * as c from './';
+import * as c from '.';
 
 
 @NgModule({
@@ -8,6 +8,6 @@ import * as c from './';
     CommonModule
   ],
   exports: [c.HamburgerComponent],
-  declarations: [c.HamburgerComponent, c.ModalComponent]
+  declarations: [c.HamburgerComponent]
 })
 export class SharedModule { }
