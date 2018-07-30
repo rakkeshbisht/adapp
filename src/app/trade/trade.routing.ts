@@ -2,15 +2,16 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import * as t from '.';
 
-const routes: Routes = [               
-        { path: 'trade', component: t.TradeComponent,
+const routes: Routes = [                
+        {             
+            path: '', component: t.TradeComponent,
             children : [           
             { 
                 path: 'equity', 
                 component : t.EquityComponent 
             },
             { 
-                path: 'equity:id',
+                path: 'equity/:id',
                 component : t.EquityComponent
             }]    
         }

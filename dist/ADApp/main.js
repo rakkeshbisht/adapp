@@ -82,7 +82,7 @@ var AccountListComponent = /** @class */ (function () {
     };
     AccountListComponent.prototype.accountClicked = function (accountNo) {
         if (accountNo)
-            this.router.navigate(['/home/trade']);
+            this.router.navigate(['/home/trade/equity', accountNo]);
     };
     AccountListComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
@@ -228,7 +228,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppRoutes", function() { return AppRoutes; });
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./src/app/index.ts");
-/* harmony import */ var _trade__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./trade */ "./src/app/trade/index.ts");
+/* harmony import */ var _trade_trade_module__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./trade/trade.module */ "./src/app/trade/trade.module.ts");
 
 
 
@@ -238,8 +238,7 @@ var routes = [
         children: [
             { path: '', redirectTo: 'accounts', pathMatch: 'full' },
             { path: 'accounts', component: ___WEBPACK_IMPORTED_MODULE_1__["AccountListComponent"] },
-            //{ path : 'trade', loadChildren : 'src/app/trade/trade.module#Trade'}      
-            { path: 'trade', component: _trade__WEBPACK_IMPORTED_MODULE_2__["TradeComponent"] }
+            { path: 'trade', loadChildren: function () { return _trade_trade_module__WEBPACK_IMPORTED_MODULE_2__["TradeModule"]; } }
         ] }
 ];
 var AppRoutes = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(routes);
@@ -342,7 +341,7 @@ module.exports = ".transparentbtn{\r\n    border:0px solid transparent;\r\n    b
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"main\">\r\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"navbar-header\">\r\n                <a class=\"navbar-brand\" href=\"#\">Trading</a>\r\n            </div>\r\n            <div class=\"nav navbar-nav\">\r\n                <form class=\"form-inline\">\r\n                    <input class=\"form-control\" style=\"width: 350px\" type=\"search\" placeholder=\"Account Name/Account Number\" aria-label=\"Search\">\r\n                    <button class=\"btn transparentbtn\" type=\"submit\">\r\n                        <span class=\"fa fa-search\"></span>\r\n                    </button>\r\n                </form>\r\n            </div>\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <hamburger-menu></hamburger-menu>\r\n            </ul>\r\n        </div>\r\n    </nav>\r\n    <router-outlet></router-outlet> \r\n</div>\r\n\r\n"
+module.exports = "<div id=\"main\">\r\n    <nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\r\n        <div class=\"container-fluid\">\r\n            <div class=\"navbar-header\">\r\n                <a class=\"navbar-brand\" href=\"/home/accounts\">Trading</a>\r\n            </div>\r\n            <div class=\"nav navbar-nav\">\r\n                <form class=\"form-inline\">\r\n                    <input class=\"form-control\" style=\"width: 350px\" type=\"search\" placeholder=\"Account Name/Account Number\" aria-label=\"Search\">\r\n                    <button class=\"btn transparentbtn\" type=\"submit\">\r\n                        <span class=\"fa fa-search\"></span>\r\n                    </button>\r\n                </form>\r\n            </div>\r\n            <div class=\"nav navbar-nav navbar-right\">\r\n                <hamburger-menu></hamburger-menu>\r\n            </div>\r\n        </div>\r\n    </nav>\r\n    <router-outlet></router-outlet> \r\n</div>\r\n\r\n"
 
 /***/ }),
 
@@ -404,64 +403,28 @@ var accountsListData = [
         "accountID": "122663279",
         "acctName": "Gs Test",
         "lplAcct": "84500511",
-        "acctClass": "SAM - Non-retirement",
+        "acctClass": "Test test Test test",
         "repID": "CCCA",
         "invstObj": "C - Growth with Income",
-        "clntGrp": null
+        "clntGrp": 'A'
     },
     {
         "accountID": "122663277",
         "acctName": "Data Tester",
         "lplAcct": "84500509",
-        "acctClass": "SAM II - Non-Retirement",
+        "acctClass": "Test test Test test",
         "repID": "CCCA",
         "invstObj": "B - Income with Moderate Growth",
-        "clntGrp": null
+        "clntGrp": 'B'
     },
     {
         "accountID": "122663275",
         "acctName": "Data Tester",
         "lplAcct": "84500507",
-        "acctClass": "SAM II - Non-Retirement",
+        "acctClass": "Test test Test test",
         "repID": "CCCA",
         "invstObj": "B - Income with Moderate Growth",
-        "clntGrp": null
-    },
-    {
-        "accountID": "122663271",
-        "acctName": "Tester One Test",
-        "lplAcct": "84500502",
-        "acctClass": "SAM - Non-retirement",
-        "repID": "CCCA",
-        "invstObj": "F - Trading",
-        "clntGrp": null
-    },
-    {
-        "accountID": "122663269",
-        "acctName": "Roy Test",
-        "lplAcct": "84500500",
-        "acctClass": "SAM - Non-retirement",
-        "repID": "CCCA",
-        "invstObj": "D - Growth",
-        "clntGrp": null
-    },
-    {
-        "accountID": "122663267",
-        "acctName": "Test Two Demo",
-        "lplAcct": "84500499",
-        "acctClass": "Outside Investments-Non-Retire",
-        "repID": "CCCA",
-        "invstObj": "A - Income with Capital Preservation",
-        "clntGrp": null
-    },
-    {
-        "accountID": "122660329",
-        "acctName": "Test Test",
-        "lplAcct": "84500462",
-        "acctClass": "Outside Investments-Non-Retire",
-        "repID": "006J",
-        "invstObj": "A - Income with Capital Preservation",
-        "clntGrp": "Test T Test"
+        "clntGrp": 'C'
     }
 ];
 
@@ -731,21 +694,26 @@ var TradeModule = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TradeRoutes", function() { return TradeRoutes; });
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! . */ "./src/app/trade/index.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./src/app/trade/index.ts");
 
-var TradeRoutes = [
-    { path: 'trade', component: ___WEBPACK_IMPORTED_MODULE_0__["TradeComponent"]
-        // children : [           
-        // { 
-        //     path: 'equity', 
-        //     component : t.EquityComponent 
-        // },
-        // { 
-        //     path: 'equity:id',
-        //     component : t.EquityComponent
-        // }]    
+
+var routes = [
+    {
+        path: '', component: ___WEBPACK_IMPORTED_MODULE_1__["TradeComponent"],
+        children: [
+            {
+                path: 'equity',
+                component: ___WEBPACK_IMPORTED_MODULE_1__["EquityComponent"]
+            },
+            {
+                path: 'equity/:id',
+                component: ___WEBPACK_IMPORTED_MODULE_1__["EquityComponent"]
+            }
+        ]
     }
 ];
+var TradeRoutes = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forChild(routes);
 
 
 /***/ }),
@@ -757,7 +725,7 @@ var TradeRoutes = [
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "#trade .row .navcontainer .sidenav {\r\n    height: 100%;\r\n    width: 200px;\r\n    position: fixed;\r\n    z-index: 1;    \r\n    left: 0;    \r\n    overflow-x: hidden;    \r\n}\r\n\r\n#trade .row .navcontainer .sidenav a {\r\n    padding: 6px 8px 6px 16px;\r\n    text-decoration: none;\r\n    font-size: 16px;\r\n    color: #818181;\r\n    display: block;    \r\n    width: 100%;\r\n    text-align: left;\r\n}\r\n\r\n#trade .row .navcontainer .sidenav a:active {\r\n    color : black;\r\n    background-color: darkgray;\r\n}\r\n\r\n#trade .row .navcontainer .sidenav a:focus {\r\n    color : black;\r\n    background-color: darkgray;\r\n}\r\n"
 
 /***/ }),
 
@@ -768,7 +736,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"app\" class=\"container\">\n    <nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">      \n      <ul class=\"navbar-nav mr-auto\">\n        <li class=\"nav-item active\">\n          <a class=\"nav-link\">Equity</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\">Mutual Funds</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\">Options</a>\n        </li>\n      </ul>      \n    </nav>\n  </div>\n"
+module.exports = "<div id=\"trade\">\n  <div class=\"row\">\n    <div class=\"col-md-3 navcontainer\">\n      <div class=\"sidenav bg-light\">\n        <a class=\"focus\" routerLink=\"/home/trade/equity\">Equity</a>\n        <a class=\"active\" routerLink=\"/home/trade/mutualfund\">Mutual Funds</a>\n        <a routerLink=\"/home/trade/option\">Options</a>         \n      </div>\n    </div>\n    <div class=\"col-md-9\">\n        <router-outlet></router-outlet>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 

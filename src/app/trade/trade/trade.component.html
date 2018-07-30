@@ -1,15 +1,14 @@
-<div id="app" class="container">
-    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">      
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link">Equity</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Mutual Funds</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link">Options</a>
-        </li>
-      </ul>      
-    </nav>
+<div id="trade">
+  <div class="row">
+    <div class="col-md-3 navcontainer">
+      <div class="sidenav bg-light">
+        <a class="active" routerLink="/home/trade/equity">Equity</a>
+        <a routerLink="/home/trade/mutualfund">Mutual Funds</a>
+        <a routerLink="/home/trade/option">Options</a>         
+      </div>
+    </div>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
+    </div>
   </div>
+</div>

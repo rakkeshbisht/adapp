@@ -26,6 +26,6 @@ export class AccountListComponent implements OnInit {
 
   accountClicked(accountNo : any) {
     if(accountNo)
-      this.router.navigate(['/home/trade']);
+      this.router.navigate(['/home/trade/equity', accountNo]);
   }
 }

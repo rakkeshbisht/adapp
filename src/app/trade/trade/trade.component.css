@@ -1,0 +1,32 @@
+#trade .row .navcontainer .sidenav {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;    
+    left: 0;    
+    overflow-x: hidden;    
+}
+
+#trade .row .navcontainer .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;    
+    width: 100%;
+    text-align: left;
+}
+
+#trade .row .navcontainer .sidenav a:hover {
+    color : black;    
+}
+
+#trade .row .navcontainer .sidenav a:active {
+    color : black;
+    background-color: darkgray;
+}
+
+#trade .row .navcontainer .sidenav a:focus {
+    color : black;
+    background-color: darkgray;
+}
